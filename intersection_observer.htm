@@ -1,0 +1,138 @@
+<html>
+<head>
+<style>
+a:link {text-decoration: none;}
+a:visited {color: blue;}
+a:hover { color: hotpink; background-color: cyan;}
+/* a:active {color: red; background-color: black; }  this link active state does not work, need a separate class */
+.active {
+color: white !important;    /* need important to override the link state style */
+background-color: blue !important;   /* need important to override the link state style */
+}
+#menu_div {
+float: left; overflow-y: auto; overflow-x: visible;
+width: 200px;
+max-height: calc(100vh - 2rem);
+}
+#main_div {
+float: right; overflow: scroll;
+max-width: calc(100vw - 240px);
+max-height: calc(100vh - 2rem);
+}
+/* MEDIA QUERIES */
+@media screen and (max-width: 600px ) {
+#menu_div {width: 150px; }
+#main_div {max-width: calc(100vw - 190px);}
+}
+@media screen and (min-width: 900px ) {
+#menu_div {width: 350px;}
+#main_div {max-width: calc(100vw - 390px);}
+}
+
+</style>
+</head>
+<body>
+<div id=menu_div>
+<a href="#p0" class="mylink">H1</a><br>
+<a href="#p1" class="mylink">H2</a><br>
+<a href="#p2" class="mylink">H3</a><br>
+<a href="#p3">333333333</a><br>
+<a href="#p4">44444444 444444 4444444444444</a><br>
+<a href="#p5">555555555555555</a><br>
+<a href="#p6">6666666 6666666666 66666666</a><br>
+<a href="#p7">7777</a><br>
+<a href="#p8">888888888888 88888888</a><br>
+<a href="#p9">999999999999 9999999999</a><br>
+<a href="#pA">AAAAAAAAAAAAA</a><br>
+<a href="#pB">BBBBBBBBBBBB</a><br>
+<a href="#pC">CCCCCCCCCCCC CCCCCCCCC</a><br>
+<a href="#pD">DDDDDDDDDDDD</a><br>
+<a href="#pE">EEEEEEEEEEE EEEEEEEE</a><br>
+<a href="#pF">FFFFFFFFFFFFFFF</a><br>
+<a href="#pG">GGGGGGGG GGGGGGGG</a><br>
+<a href="#pH">HHHHHHHHHHH</a><br>
+<a href="#pI">IIIIIIIII</a><br>
+<a href="#pJ">JJJJJJJJJJJJ</a><br>
+<a href="#pK">KKKKKKKKKK KKKKKKKKKKK KKKKKKKKKK</a><br>
+<a href="#pL">LLLLLLLLLLLLLL</a><br>
+<a href="#pM">MMMM MMMMMMMM MMMMM</a><br>
+<a href="#pN">NNNNNNNNNN</a><br>
+<a href="#pO">OOOOOOOOOOO</a><br>
+<a href="#pP">PPPPPPPPPPP</a><br>
+<a href="#pQ">QQQQQQQQQQQ</a><br>
+<a href="#pR">RRRRRRRRR</a><br>
+<a href="#pS">SSSSSSSSSSSSS</a><br>
+<a href="#pT">TTTTTTTTTTT</a><br>
+<a href="#pU">UUUUUU UUUUUU</a><br>
+<a href="#pV">VVVVVVVVVV</a><br>
+<a href="#pW">WWW</a><br>
+<a href="#pX">XXXXXXX</a><br>
+<a href="#pY">YYYYYYY</a><br>
+<a href="#pZ">ZZZZZZZZZZ</a><br>
+</div>
+<div id=main_div>
+<h1 class="content" id=p0>Intersection Observer</h1>
+<h2 class="content" id=p1>header 2</h2>
+<h3 class="content" id=p2>header 3</p>
+<p class="content" id=p3 style="padding-bottom: 400px; border:solid; background-color: pink;">333 3333<br>333 3333<br>333 3333333 3333<br>333 3333<br>333 3333</p>
+<p class="content" id=p4>4444</p>
+<p class="content" id=p5>5555</p>
+<p class="content" id=p6>666 66666666666</p>
+<p class="content" id=p7>77 7</p>
+<p  class="content" id=p8>8888<br>8</p>
+<p class="content" id=p9>99999999999999<br>99999999</p>
+<p class="content" id=pA>AAAAAAA<br>AAAAAAAA</p>
+<p class="content" id=pB>BBBBBBBBBBBBBB  BBBBBBBBBBBBBB BBBBBBBBBBBBBB<br>BBBBBBBBBBBBBB<br>BBBBBBBBBBBBBB<br>BBBBBBBBBBBBBB<br>BBBBBBBBBBBBBB</p>
+<p class="content" id=pC>CCCCCCCCCCCCC</p>
+<p class="content" id=pD>DDDDDDDDDDDDDD<br>DDDDDDDDDDDDDD<br>DDDDDDDDDDDDDD<br>DDDDDDDDDDDDDD<br></p>
+<p class="content" id=pE>EEEEEEEEE EEEEEEEEEEEEEEEEE<br>EEEEEEEEE </p>
+<p class="content" id=pF>FFFFFFFFFFFFF<br>FFFFFFFFFFFFFFFFFFFFFFF<br>FFFFFFFFFFFFF<br>FFFF FFFFFFFFFFFFFFFFFFFFF FFFFFFFFFFFFFFFFFF</p>
+<p class="content" id=pG>GGGG<br>GG<br>GGG<br>GGG<br>GG<br><br>GGGGGG</p>
+<p class="content" id=pH>HHHHHHH<br>HHHHHHHH<br>HHHHH<br>HHHH HHHHHHH<br>HHHHHHHH<br>HHHHHHHHHHHHHHHH<br>HHHHHHHH<br>HHHHHHHHHHHHHHHH<br>HHHHHHHH</p>
+<p class="content" id=pI>IIIIIIIIIIIIIIIIiii<br> ii iii iIIIIII IIIIIIIIIIIIIIIIIIIII<br>IIIIIIIIIiii ii iii iIIIIII IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIiii ii iii iIIIIII IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIiii ii iii iIIIIII IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIiii ii iii iIIIIII IIIIIIIIIIIIIIIIIII</p>
+<p class="content" id=pJ>JJJJJJJJJJJJJJJJJ<br>JJJJJJJJJJJJJJJJJJ<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>JJJJJJ<br>JJJJJJJJ<br>JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ<br>JJJJJJJJJJJJJJ</p>
+<p class="content" id=pK>KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK<br><br><br><br><br><br><br><br><br>KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK</p>
+<p class="content" id=pL>LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL LLLLLLLLLL</p>
+<p class="content" id=pM>MMMMM MMMMMMMMMMMMMMMMMMMMMMMMMM MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>MM MMMMMMMMMMMMMMMMMMMMMMMMMM</p>
+<p class="content" id=pN>NNNNNNNN<br><br><br><br><br><br><br><br><br><br><br><br><br>NNNNNNNN NNNNNNN</p>
+<p class="content" id=pO>OOOOOOOOOOOOOoooooOO OOOOOOOOOOOOOoooooOO <br>O OOoooo oooo</p>
+<p class="content" id=pP>PPPPPPPPPPPPPPPPPPPPPP PPPPPPP</p>
+<p class="content" id=pQ>QQQQQQQQQQQ<br><br><br>QQQQQQQQQQQQQQQQQQQQQQQQQ</p>
+<p class="content" id=pR>RRRRRRRRRRRRR<br><br><br>RRRRRRRRRRRRRRRRR</p>
+<p class="content" id=pS>SSSSSSSSSSSSSSSS</p>
+<p class="content" id=pT>TTTTTTTTTTTTTTT TTTTTTTTTTTTTTTTT TTTTTTTTTTTTTTTTT TTTTTTTTTTTTTTTTT TTTTTTTTTTTTTTTTT TTTTTTTTTTTTTTTTT TTTTTTTTTTTTTTTTT TTTTTTTTTTTTTTTTT TTT</p>
+<p class="content" id=pU>UUUUUUUUUUUUUU UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU UUUUUUUUUUUUUU</p>
+<p class="content" id=pV>VVVVV VVVVVVVVV  VVVVV</p>
+<p class="content" id=pW>WWWW WWWW  WWWW WWWWWWWW WWWW WWWWWWWW WWWW WWWW</p>
+<p class="content" id=pX>XXXXXXxxxx XXXXxxxXXXXXXxxxx XXXXxxxxXXXXXXxxxx XXXXxxxxXXXXXXxxxx XXXXxxxxXXXXXXxxxx XXXXxxxxXXXXXXxxxx XXXXxxxx</p>
+<p class="content" id=pY>YYYYYYYYYYYY YYYYYYYYYYYY YYYYYYYYYYYYYYYYYYYYYYYY YYYYYYYYYYYY YYYYYYYYYYYYYYYYYYYYYYYY YYYYYYYYYYYY YYYYYYYYYYYY</p>
+<p class="content" id=pZ>ZZZZZzzz zz ZZZZZZZzzz zz ZZZZZzzz zzZZZZZzzz zz ZZZZZzzz zz ZZZZZzzz zz</p>
+</div>
+<script>
+let options = {
+  root: document.querySelector("#main_div"),
+  rootMargin: "0px",
+  threshold: 0.0,  // so long it appears
+};
+function callback(entries, observer) {
+  entries.forEach((entry) => {  // maybe more than one items fulfil the observe criteria
+  // console.log ("inside callback, entry: "); console.log (entry)
+  // console.log ("entry.target.id: " + entry.target.id);
+  els = document.querySelector("a[href='#" + entry.target.id + "']");
+  // console.log ("els: "); console.log (els);
+  if (els) { //  && els.classList) {
+  // console.log ("adding active to: " + els);
+  if (entry.isIntersecting) {
+    els.classList.add ("active");
+	els.scrollIntoView(false); // ensure the active element is in view
+	}
+ else
+   els.classList.remove("active");
+	}
+});
+} // callback
+let observer = new IntersectionObserver(callback, options);
+(document.querySelectorAll(".content")).forEach((item) => { observer.observe(item);});
+</script>
+</body>
+</html>
